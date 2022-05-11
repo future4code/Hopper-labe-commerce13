@@ -47,18 +47,22 @@ export class App extends React.Component {
           onChange = {this.onChangeNome}
           />
         </div>
+        
+        <div className='meio'>
+          <div className='cabecalho'>
+            <h3>Quantidade de produtos:</h3>
+              <div className='ordem'>
+                <p>Ordenação:</p>
+                <select>
+                  <option>Crescente</option>
+                  <option>Decrescente</option>
+                </select>
 
-        <div className='cabecalho'>
-          <h3>Quantidade de produtos:</h3>
-
-            <div className='ordem'>
-              <p>Ordenação:</p>
-              <select>
-                <option>Crescente</option>
-                <option>Decrescente</option>
-              </select>
-
-            </div>
+              </div>
+          </div>
+          <div>
+            <h1> Produtos</h1>
+          </div>
         </div>
 
 

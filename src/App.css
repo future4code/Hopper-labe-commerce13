@@ -38,7 +38,10 @@
     transform: rotate(360deg);
   }
 }
-
+/* .meio{
+  display: flex;
+  flex-direction: column;
+} */
 .cabecalho{
   width: 60vw;
   height: 10vh;
