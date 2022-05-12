@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Produto } from './Components/Produto';
 
 
 export class App extends React.Component {
@@ -33,6 +34,7 @@ export class App extends React.Component {
               </div>
           </div>
           <div>
+            <Produto></Produto>
             <h1> Produtos</h1>
           </div>
         </div>
