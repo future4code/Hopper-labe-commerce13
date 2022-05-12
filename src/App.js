@@ -1,24 +1,52 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import { Produto } from './Components/Produto';
 
 
 export class App extends React.Component {
+
+  state = {
+    valorMinimo: " ", 
+    valorMaximo: " ",
+    buscarNome: " ", 
+  }
+
+  onChangeMinimo = (event) => {
+    this.setState ({valorMinimo: event.target.value})
+  }
+
+  onChangeMaximo = (event) => {
+    this.setState ({valorMaximo: event.target.value})
+  }
+
+  onChangeNome = (event) => {
+    this.setState ({valorNome: event.target.value})
+  }
+
+
   render(){
+
+    
     return (
       <div className="App">
         <div className='filtros'>
           <h3>Filtros</h3>
 
           <label>Valor mínimo:</label>
-          <input type="number"/>
+          <input type="number" value={this.state.valorMinimo} 
+          onChange = {this.onChangeMinimo}
+          />
 
           <label>Valor máximo:</label>
-          <input type="number"/>
+          <input type="number" value={this.state.valorMaximo}
+          onChange = {this.onChangeMaximo}
+          />
 
           <label>Buscar por nome:</label>
-          <input type="text"/>
+          <input type="text" value={this.state.buscarNome}
+          onChange = {this.onChangeNome}
+          />
         </div>
         
         <div className='meio'>
