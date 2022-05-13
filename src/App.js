@@ -2,6 +2,7 @@ import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import { Produto } from './Components/Produto';
+import listaDeProdutos from "./data/produtos.json";
 
 
 export class App extends React.Component {
@@ -10,6 +11,9 @@ export class App extends React.Component {
     valorMinimo: " ", 
     valorMaximo: " ",
     buscarNome: " ", 
+
+    // products está declarado em ingles para evitar conflito com a class declarada como "produtos"
+    products: listaDeProdutos
   }
 
   onChangeMinimo = (event) => {
@@ -21,7 +25,7 @@ export class App extends React.Component {
   }
 
   onChangeNome = (event) => {
-    this.setState ({valorNome: event.target.value})
+    this.setState ({buscarNome: event.target.value})
   }
 
 
@@ -61,9 +65,15 @@ export class App extends React.Component {
 
               </div>
           </div>
-          <div>
-            <Produto></Produto>
-            <h1> Produtos</h1>
+          <div className='produtos'>
+            {this.state.products
+            .filter(product => {
+              return product.titulo.toLowerCase().includes(this.state.buscarNome.toLowerCase())
+            })
+            .map(product => {
+              return <Produto key={product.id} product={product}/>
+            })}
+            
           </div>
         </div>
 
