@@ -4,7 +4,7 @@ import './Produto.css';
 
 export function Produto(props) {
         return    <div className="card">
-                <img src="https://picsum.photos/200/200"/>
+                <img src="https://picsum.photos/200/200" alt=""/>
                 <div className="textos">
                     <h2 title={props.product.titulo}>
                         <u>{props.product.titulo}</u>
