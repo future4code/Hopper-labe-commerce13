@@ -2,7 +2,7 @@ import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import { Produto } from './Components/Produto';
-import listaDeProdutos from "./data/produtos.json";
+import listaDeProdutos from "./Data/produtos.json";
 
 
 export class App extends React.Component {
@@ -70,10 +70,16 @@ export class App extends React.Component {
             .filter(product => {
               return product.titulo.toLowerCase().includes(this.state.buscarNome.toLowerCase())
             })
+            .filter(product => {
+              return this.state.valorMinimo === "" || product.preco >= this.state.valorMinimo
+            })
+            .filter(product => {
+              return this.state.valorMaximo === "" || product.preco <= this.state.valorMaximo
+            })
             .map(product => {
-              return <Produto key={product.id} product={product}/>
+              return <Produto key={product.id} product={product} />
             })}
-            
+
           </div>
         </div>
 
