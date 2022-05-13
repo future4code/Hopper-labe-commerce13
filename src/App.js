@@ -2,7 +2,7 @@ import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import { Produto } from './Components/Produto';
-import listaDeProdutos from "./data/produtos.json";
+import listaDeProdutos from "./Data/produtos.json";
 
 
 export class App extends React.Component {
