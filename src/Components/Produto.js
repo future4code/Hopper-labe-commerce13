@@ -1,13 +1,16 @@
 import React from "react";
-import './App.css';
+import './Produto.css';
+// import listaDeProdutos from "./data/produtos.json";
 
-export class Produto extends React.Component {
-    render(){
-        return(
-            <div>
-                <h1>Hello</h1>
+export function Produto(props) {
+        return    <div className="card">
                 <img src="https://picsum.photos/200/200"/>
+                <div className="textos">
+                    <h2 title={props.product.titulo}>
+                        <u>{props.product.titulo}</u>
+                    </h2>
+                    <span> R$ {props.product.preco}</span>
+                    <button>Adicionar ao carrinho</button>
+                </div>
             </div>
-        )
     }
-}
