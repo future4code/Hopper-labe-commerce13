@@ -2,18 +2,19 @@ import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import { Produto } from './Components/Produto';
-import listaDeProdutos from "./Data/produtos.json";
+import listaDeProdutos from "./data/produtos.json";
 
 
 export class App extends React.Component {
 
   state = {
-    valorMinimo: " ", 
-    valorMaximo: " ",
-    buscarNome: " ", 
+    valorMinimo: "", 
+    valorMaximo: "",
+    buscarNome: "", 
 
     // products está declarado em ingles para evitar conflito com a class declarada como "produtos"
-    products: listaDeProdutos
+    products: listaDeProdutos,
+    order: "asc"
   }
 
   onChangeMinimo = (event) => {
@@ -26,6 +27,12 @@ export class App extends React.Component {
 
   onChangeNome = (event) => {
     this.setState ({buscarNome: event.target.value})
+  }
+
+  mudarOrdem = (event) => {
+    this.setState({
+      order: event.target.value
+    })
   }
 
 
@@ -58,9 +65,12 @@ export class App extends React.Component {
             <h3>Quantidade de produtos:</h3>
               <div className='ordem'>
                 <p>Ordenação:</p>
-                <select>
-                  <option>Crescente</option>
-                  <option>Decrescente</option>
+                <select 
+                  name='order' 
+                  value={this.state.order}
+                  onChange={this.mudarOrdem}>
+                  <option value="asc">Crescente</option>
+                  <option value="desc">Decrescente</option>
                 </select>
 
               </div>
