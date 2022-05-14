@@ -8,9 +8,9 @@ import listaDeProdutos from "./Data/produtos.json";
 export class App extends React.Component {
 
   state = {
-    valorMinimo: " ", 
-    valorMaximo: " ",
-    buscarNome: " ", 
+    valorMinimo: "", 
+    valorMaximo: "",
+    buscarNome: "", 
 
     // products está declarado em ingles para evitar conflito com a class declarada como "produtos"
     products: listaDeProdutos
