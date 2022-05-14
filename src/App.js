@@ -14,7 +14,7 @@ export class App extends React.Component {
 
     // products está declarado em ingles para evitar conflito com a class declarada como "produtos"
     products: listaDeProdutos,
-    order: "asc"
+    order: 1
   }
 
   onChangeMinimo = (event) => {
@@ -61,6 +61,7 @@ export class App extends React.Component {
         </div>
         
         <div className='meio'>
+          <h1>Space <em>Tuor</em> &#x1F680; </h1>
           <div className='cabecalho'>
             <h3>Quantidade de produtos:</h3>
               <div className='ordem'>
@@ -69,8 +70,9 @@ export class App extends React.Component {
                   name='order' 
                   value={this.state.order}
                   onChange={this.mudarOrdem}>
-                  <option value="asc">Crescente</option>
-                  <option value="desc">Decrescente</option>
+
+                  <option value={1}>Crescente</option>
+                  <option value={-1}>Decrescente</option>
                 </select>
 
               </div>
@@ -85,6 +87,14 @@ export class App extends React.Component {
             })
             .filter(product => {
               return this.state.valorMaximo === "" || product.preco <= this.state.valorMaximo
+            })
+            .sort((a,b) => {
+              switch (this.state.order){
+                case "decrescente":
+                  return this.state.order * a.preco.localeCompare(b.preco)
+                default:
+                  return this.state.order * (a.preco - b.preco)
+              }
             })
             .map(product => {
               return <Produto key={product.id} product={product} />

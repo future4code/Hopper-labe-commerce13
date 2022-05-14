@@ -1,32 +1,32 @@
 [
     {
         "id": 1,
-        "titulo": "Produto 1",
-        "preco": 1000
+        "titulo": "Lua",
+        "preco": 500
     },
     {
         "id": 2,
-        "titulo": "Produto 2",
-        "preco":3000
+        "titulo": "Marte",
+        "preco": 800
     },
     {
         "id": 3,
-        "titulo": "Produto 3",
-        "preco":2500
+        "titulo": "Planeta Vegeta",
+        "preco": 25000
     },
     {
         "id": 4,
-        "titulo": "Produto 4",
-        "preco":10000
+        "titulo": "Ktypton",
+        "preco":100000
     },
     {
         "id": 5,
-        "titulo": "Produto 5",
-        "preco":6000
+        "titulo": "Cybertron",
+        "preco":60000
     },
     {
         "id": 6,
-        "titulo": "Produto 6",
-        "preco":500
+        "titulo": "Vulcano",
+        "preco":500000
     }
 ]
