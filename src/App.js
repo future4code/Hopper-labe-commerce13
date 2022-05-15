@@ -14,7 +14,8 @@ export class App extends React.Component {
 
     // products está declarado em ingles para evitar conflito com a class declarada como "produtos"
     products: listaDeProdutos,
-    order: 1
+    order: 1,
+    carrinho: 0
   }
 
   onChangeMinimo = (event) => {
@@ -34,6 +35,9 @@ export class App extends React.Component {
       order: event.target.value
     })
   }
+
+  // addProduct = () => {
+  // }
 
 
   render(){

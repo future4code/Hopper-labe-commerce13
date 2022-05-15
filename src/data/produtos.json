@@ -2,17 +2,17 @@
     {
         "id": 1,
         "titulo": "Lua",
-        "preco": 500
+        "preco": 50
     },
     {
         "id": 2,
         "titulo": "Marte",
-        "preco": 800
+        "preco": 80
     },
     {
         "id": 3,
         "titulo": "Planeta Vegeta",
-        "preco": 25000
+        "preco": 250000
     },
     {
         "id": 4,
@@ -22,11 +22,11 @@
     {
         "id": 5,
         "titulo": "Cybertron",
-        "preco":60000
+        "preco":600000
     },
     {
         "id": 6,
         "titulo": "Vulcano",
-        "preco":500000
+        "preco":900000
     }
 ]
