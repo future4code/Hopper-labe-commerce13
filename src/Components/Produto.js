@@ -4,13 +4,13 @@ import './Produto.css';
 
 export function Produto(props) {
         return    <div className="card">
-                <img src="https://picsum.photos/200/200" alt=""/>
+                <img className="imagensPlanetas" src={ props.product.imagem } />
                 <div className="textos">
-                    <h2 title={props.product.titulo}>
+                    <h2 className="tituloPlanetas" title={props.product.titulo}>
                         <u>{props.product.titulo}</u>
                     </h2>
-                    <span> R$ {props.product.preco} milhões</span>
-                    <button>Adicionar pacote de viagem</button>
+                    <span class="precoProdutos"> R$ {props.product.preco} milhões</span>
+                    <button className="button">Adicionar pacote de viagem</button>
                 </div>
             </div>
     }

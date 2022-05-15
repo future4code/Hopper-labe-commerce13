@@ -40,6 +40,7 @@ export class App extends React.Component {
 
     
     return (
+
       <div className="App">
         <div className='filtros'>
           <h3>Filtros</h3>

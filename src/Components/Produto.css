@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     margin: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
     width: 200px;
     height: 320px;
     
@@ -12,8 +12,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 u{
     text-decoration: none;
+}
+
+a:hover{
+    color: rgb(6, 5, 7);
+    transition: 0.3s all;
+}
+
+.button {
+    margin-bottom: 5%;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+.imagensPlanetas {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 320px;
+}
+
+.tituloPlanetas {
+    margin-top: 2%;
+    
+}
+
+.precoProdutos {
+    margin-top: -5%;
 }
