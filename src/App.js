@@ -62,7 +62,8 @@ export class App extends React.Component {
         </div>
         
         <div className='meio'>
-          <h1>Space <em>Tuor</em> &#x1F680; </h1>
+          <h1>Space <em>Tour</em> &#x1F680; </h1>
+          <h2>Agende a sua viagem!</h2>
           <div className='cabecalho'>
             <h3>Quantidade de produtos:</h3>
               <div className='ordem'>

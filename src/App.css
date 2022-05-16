@@ -119,11 +119,17 @@ label{
 }
 
 input{
-  color: white;
+  color: black;
 }
 
 div {
   background-color: black;
   background-image: url(https://i.ytimg.com/vi/NtOwzU5Rpp8/maxresdefault.jpg);
 
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  color: white;
 }
