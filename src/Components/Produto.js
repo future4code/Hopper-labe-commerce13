@@ -9,7 +9,7 @@ export function Produto(props) {
                     <h2 className="tituloPlanetas" title={props.product.titulo}>
                         <u>{props.product.titulo}</u>
                     </h2>
-                    <span class="precoProdutos"> R$ {props.product.preco} milhões</span>
+                    <span class="precoProdutos"> R$ {props.product.preco} Milhões</span>
                     <button className="button">Adicionar pacote de viagem</button>
                 </div>
             </div>

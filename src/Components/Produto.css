@@ -26,6 +26,9 @@ a:hover{
 
 .button {
     margin-bottom: 5%;
+    float: left;
+    border: 1px solid;
+    
 }
 
 .button:hover {
